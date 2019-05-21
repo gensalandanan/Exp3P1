@@ -1,0 +1,39 @@
+#include<iomanip>
+#include<iostream>
+#include<cmath>
+
+using namespace std;
+int main () 
+{
+	int arr[10];
+	int ctr, sum=0;
+	int high=-1, low=99999;
+	float ave;
+	
+	cout << "Enter 10 numbers: " << endl;
+	for (ctr=0;ctr<10;ctr++)
+	{
+		cin >> arr[ctr];
+		
+		if (arr[ctr] < low)
+		{
+			low = arr[ctr];
+		}
+		
+		if (arr[ctr] > high)
+		{
+			high = arr[ctr];
+		}
+		 
+		sum = sum + arr [ctr];
+	}
+	
+	ave = (float)sum/10;
+	
+	cout << "Smallest integer: " << low << endl;
+    cout << "Largest integer: "<<high << endl;
+	cout << "Sum: "<< sum << endl;
+	cout << "Average: " << ave << endl;
+	
+	return 0;
+}
